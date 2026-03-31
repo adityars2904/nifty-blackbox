@@ -1,0 +1,15 @@
+{
+  "symbol": "BANKNIFTY",
+  "timeframe": "5m",
+  "train_samples": 37950,
+  "val_samples": 12375,
+  "movement": {
+    "train_cv_accuracy": 0.36841772151898733,
+    "val_accuracy": 0.3502834008097166
+  },
+  "risk": {
+    "train_cv_rmse": 25.567579150350287,
+    "val_rmse": 26.45394191987831,
+    "val_spearman": 0.05841134232034408
+  }
+}

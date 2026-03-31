@@ -1,0 +1,15 @@
+[project]
+name = "nifty-paper-trading"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[tool.pyright]
+include = ["backend"]
+extraPaths = ["backend"]
+venvPath = "."
+venv = "venv"
+pythonVersion = "3.12"
+
+[tool.pyre]
+source_directories = ["backend"]
+search_path = ["backend", "venv/lib/python3.12/site-packages"]

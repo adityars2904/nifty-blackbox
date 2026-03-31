@@ -1,0 +1,15 @@
+{
+  "symbol": "NIFTY",
+  "timeframe": "15m",
+  "train_samples": 13156,
+  "val_samples": 4290,
+  "movement": {
+    "train_cv_accuracy": 0.36480804387568555,
+    "val_accuracy": 0.3817116060961313
+  },
+  "risk": {
+    "train_cv_rmse": 27.918211348787544,
+    "val_rmse": 29.124046711186534,
+    "val_spearman": 0.05804211123202889
+  }
+}
