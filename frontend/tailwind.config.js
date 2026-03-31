@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         mono: ['"JetBrains Mono"', 'Consolas', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Outfit', 'system-ui', 'sans-serif'],
       },
     },
   },

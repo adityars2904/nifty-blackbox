@@ -317,6 +317,26 @@ def main():
     
     # Save outputs
     if metrics_list:
+        import json
+        
+        # Build JSON dictionary before stringifying the DataFrame
+        json_payload = {
+            "portfolio": {
+                "initial_capital": DEFAULT_CAPITAL,
+                "final_capital": current_capital,
+                "net_pnl": final_pnl,
+                "return_pct": total_return * 100,
+                "total_trades": len(results_df),
+                "rejected_trades": len(all_trades) - len(results_df),
+                "max_dd": global_max_dd * 100,
+                "sharpe": sharpe,
+                "sortino": sortino
+            },
+            "assets": metrics_list
+        }
+        with open(OUTPUT_DIR / "backtest_metrics.json", "w") as f:
+            json.dump(json_payload, f, indent=4)
+            
         df_metrics = pd.DataFrame(metrics_list)
         for c in ["Win Rate", "Max DD"]:
             df_metrics[c] = df_metrics[c].apply(lambda x: f"{x:.1%}")

@@ -27,3 +27,12 @@ export function fetchHealth() {
 export function fetchCandles(symbol = 'NIFTY', n = 200, timeframe = '5m') {
   return request(`/api/candles?symbol=${encodeURIComponent(symbol)}&n=${n}&timeframe=${encodeURIComponent(timeframe)}`);
 }
+
+export function fetchBacktestMetrics() {
+  return request('/api/research/metrics');
+}
+
+export function fetchBacktestTrades(symbol) {
+  const query = symbol ? `?symbol=${encodeURIComponent(symbol)}` : '';
+  return request(`/api/research/trades${query}`);
+}

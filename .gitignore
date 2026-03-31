@@ -35,6 +35,7 @@ data/processed/*.parquet
 # ============================================================================
 research/outputs/*.csv
 research/outputs/*.png
+research/outputs/*.json
 research/outputs/test_models/
 
 # ============================================================================
@@ -62,5 +63,6 @@ pyrightconfig.json
 # MISC
 # ============================================================================
 *.log
+out.txt
 .gemini/
 questdb/

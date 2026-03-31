@@ -18,6 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from adapters.questdb_adapter import init_pool, close_pool
 from routers.health import router as health_router
 from routers.candles import router as candles_router
+from routers.research import router as research_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -60,6 +61,7 @@ app.add_middleware(
 
 app.include_router(health_router, prefix="/api")
 app.include_router(candles_router)
+app.include_router(research_router)
 
 
 @app.get("/")
